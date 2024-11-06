@@ -18,8 +18,9 @@ import { FontAwesome } from '@expo/vector-icons';
 import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+const HUGGING_FACE_API_KEY = process.env.HUGGING_FACE_API_KEY;
 
-const HUGGING_FACE_API_KEY = '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';
+
 
 const blobToBase64 = (blob: Blob) => {
   return new Promise((resolve, reject) => {
