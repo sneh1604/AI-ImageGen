@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# 🖼️ AI Image Generation App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **AI Image Generation App**! This mobile application allows users to generate AI-based images by providing prompts, save their creations, and explore saved images, all within an engaging user interface.
 
-## Get started
+## 🚀 Overview
 
-1. Install dependencies
+This React Native app was built using **Expo** and utilizes **AI-based image generation APIs**. Users can create, save, and share AI-generated images. Here’s a quick overview of its core features:
 
-   ```bash
-   npm install
-   ```
+- **AI Image Generation**: Users can enter custom prompts and generate images powered by Hugging Face's API or an alternative image generation API.
+- **Gallery of Saved Images**: Save generated images with prompts for easy access and regeneration.
+- **Dynamic Navigation**: Intuitive navigation includes tabs and a drawer with custom icons for easy access to all features.
+- **Contact Us Page**: Users can connect with the developer or view the developer’s portfolio, GitHub, and more.
 
-2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+## 📱 Screens & Functionalities
 
-In the output, you'll find options to open the app in a
+-   **Home Screen**  
+    Provides a warm welcome and simple navigation options.
+    
+-   **Image Generator**  
+    Features animated, guided text input for prompt ideas and a button to initiate image generation. Includes saving and sharing functionality.
+    
+-   **Saved Gallery**  
+    View and manage previously generated images with options to regenerate using saved prompts.
+    
+-   **Contact Us**  
+    An intuitive Contact Us screen with links to developer’s GitHub, email, and other contact options.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📸 Screenshots
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Home Screen              | Image Generation          | Gallery of Saved Images       | Contact Us               |
+|--------------------------|---------------------------|-------------------------------|--------------------------|
+| ![Home Screen](https://github.com/user-attachments/assets/8e61625e-1845-47b1-9a28-83c08d75f354) | ![Image Generation](https://github.com/user-attachments/assets/e15ac556-8e42-4f6d-bb0c-a191f417e6d5) |![Gallery of Saved Images](https://github.com/user-attachments/assets/a3845e10-f25b-47ff-a652-2b2796188230)| ![Contact Us](https://github.com/user-attachments/assets/efd4b278-366f-49ec-9864-8b363ca3b91e)
 
-## Get a fresh project
 
-When you're ready, run:
+## 🚀 Getting Started
 
-```bash
-npm run reset-project
-```
+### Prerequisites
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+-   Node.js and Expo CLI
+-   **Hugging Face API Key** for accessing the Stable Diffusion model.
 
-## Learn more
+### Installation
 
-To learn more about developing your project with Expo, look at the following resources:
+1.  **Clone the Repository**
+        
+   
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+     git clone https://github.com/sneh1604/AI-ImageGen.git
+        cd AI-ImageGen 
+    
+2.  **Install Dependencies**
+    
+    `npm install` 
+    
+3.  **Set Up API Key**
+    
+    -   In the main project folder, create a `.env` file.
+    -   Add your Hugging Face API key:
+        
+        
+        `HUGGING_FACE_API_KEY='your_api_key_here'` 
+        
+4.  **Start the App**
 
-## Join the community
+    
+    `expo start` 
+    
 
-Join our community of developers creating universal apps.
+## 📸 Usage
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1.  **Generate an Image**  
+    Navigate to the “Generate” screen, enter a prompt, and tap “Generate Image.”
+    
+2.  **Save & Share**  
+    Save your favorite creations or share them directly.
+    
+3.  **Explore Gallery**  
+    Access saved prompts and images from the gallery.
+    
+4.  **Contact Us**  
+    Use the Contact Us screen for quick developer access.
+    
+
+## 📚 Technologies Used
+
+-   **React Native / Expo** for mobile development.
+-   **Hugging Face API** for Stable Diffusion-based image generation.
+-   **File System & Media Library** for image management.
+
+## 📬 Contact
+
+-   **Developer:** Sneh Shah
+-   **Email:** snehpshah5721@gmail.com
+-   **GitHub:** [Your GitHub Profile](https://github.com/sneh1604)
+
+Happy generating!
