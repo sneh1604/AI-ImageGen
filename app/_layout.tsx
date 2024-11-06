@@ -1,37 +1,65 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import React from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Drawer } from 'expo-router/drawer';
+import { MaterialIcons } from '@expo/vector-icons'; // Importing icons from expo vector icons
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
+export default function Layout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer
+        screenOptions={{
+          drawerActiveTintColor: '#6200EE', // Custom active color
+          drawerLabelStyle: { fontSize: 16, fontWeight: 'bold' },
+          drawerStyle: {
+            backgroundColor: '#f0f0f0', // Background for the drawer
+          },
+          headerStyle: {
+            backgroundColor: '#000000', // Header background color
+          },
+          headerTintColor: '#fff', // Header text color
+        }}
+      >
+        <Drawer.Screen
+          name="index"
+          options={{
+            drawerLabel: 'Home',
+            title: 'Home',
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="home" size={24} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="hero"
+          options={{
+            drawerLabel: 'Generate',
+            title: 'Generate',
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="image" size={24} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="gallery"
+          options={{
+            drawerLabel: 'Gallery',
+            title: 'Gallery',
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="collections" size={24} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="contactus"
+          options={{
+            drawerLabel: 'Contact Us',
+            title: 'Contact Us',
+            drawerIcon: ({ color }) => (
+              <MaterialIcons name="contact-mail" size={24} color={color} />
+            ),
+          }}
+        />
+      </Drawer>
+    </GestureHandlerRootView>
   );
 }
