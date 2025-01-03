@@ -51,7 +51,7 @@ export default function GalleryScreen() {
           <Text style={styles.promptText}>{item.prompt}</Text>
           <View style={styles.actions}>
             <TouchableOpacity onPress={() => regenerateImage(item.prompt)}>
-              <FontAwesome name="refresh" size={24} color="#6C5BD4" />
+              <FontAwesome name="refresh" size={24} color="#6C5BD5" />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => deleteImage(index)}>
               <FontAwesome name="trash" size={24} color="red" style={{ marginLeft: 10 }} />
